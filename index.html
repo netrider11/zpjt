@@ -1,66 +1,229 @@
-<!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Zpjt by netrider11</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Zpjt</h1>
-        <p></p>
-
-        <p class="view"><a href="https://github.com/netrider11/zpjt">View the Project on GitHub <small>netrider11/zpjt</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/netrider11/zpjt/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/netrider11/zpjt/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/netrider11/zpjt">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/netrider11">netrider11</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+    <head>
+        <title>ZonesPlanner</title>
+		<link type="text/css" rel="stylesheet" media="screen" href="jqtouch/jqtouch.css">
+		<link type="text/css" rel="stylesheet" media="screen" href="themes/jqt/theme.css">
+		<link type="text/css" rel="stylesheet" media="screen" href="zonesplanner.css">
+		<script type="text/javascript" src="jqtouch/jquery.js"></script>
+		<script type="text/javascript" src="jqtouch/jqtouch.js"></script>
+		<script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
+		<script type="text/javascript" src="zonesplanner.js" charset="utf-8"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="gtranslator.js"></script>
+    </head>
+    <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>ZonesPlanner</h1>
+				<a class="button flip" href="#more" id="settingstart">More</a>
+            </div>
+			<ul class="plastic">
+				<li>
+					<span class="timetable" style="width:100%">Tap next row to select cities</font>
+				</li>
+				<li>
+					<select id="city1" class="timetable timetablesel" >
+						<option value=0>GMT</option>
+						<option value=1>Vancouver</option>
+						<option value=2>SanFrancisco</option>
+						<option value=3>Seattle</option>
+						<option value=4>LosAngeles</option>
+						<option value=5>Denver</option>
+						<option value=6>MexicoCity</option>
+						<option value=7>Houston</option>
+						<option value=8>Minneapolis</option>
+						<option value=9>NewOrleans</option>
+						<option value=10>Chicago</option>
+						<option value=11>HongKong</option>
+						<option value=12>Beijing</option>
+						<option value=13>Helsinki</option>
+						<option value=14>London</option>
+						<option value=15>Madrid</option>
+						<option value=16>Barcelona</option>
+					</select>
+					<select id="city2" class="timetable timetablesel" >
+						<option value=0>GMT</option>
+						<option value=1>Vancouver</option>
+						<option value=2>SanFrancisco</option>
+						<option value=3>Seattle</option>
+						<option value=4>LosAngeles</option>
+						<option value=5>Denver</option>
+						<option value=6>MexicoCity</option>
+						<option value=7>Houston</option>
+						<option value=8>Minneapolis</option>
+						<option value=9>NewOrleans</option>
+						<option value=10>Chicago</option>
+						<option value=11>HongKong</option>
+						<option value=12>Beijing</option>
+						<option value=13>Helsinki</option>
+						<option value=14>London</option>
+						<option value=15>Madrid</option>
+						<option value=16>Barcelona</option>
+					</select>
+					<select id="city3" class="timetable timetablesel" >
+						<option value=0>GMT</option>
+						<option value=1>Vancouver</option>
+						<option value=2>SanFrancisco</option>
+						<option value=3>Seattle</option>
+						<option value=4>LosAngeles</option>
+						<option value=5>Denver</option>
+						<option value=6>MexicoCity</option>
+						<option value=7>Houston</option>
+						<option value=8>Minneapolis</option>
+						<option value=9>NewOrleans</option>
+						<option value=10>Chicago</option>
+						<option value=11>HongKong</option>
+						<option value=12>Beijing</option>
+						<option value=13>Helsinki</option>
+						<option value=14>London</option>
+						<option value=15>Madrid</option>
+						<option value=16>Barcelona</option>
+					</select>
+				</li>
+				<li>
+					<span id="city11time" class="timetable">Time1</span>
+					<span id="city12time" class="timetable">Time2</span>
+					<span id="city13time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city21time" class="timetable">Time1</span>
+					<span id="city22time" class="timetable">Time2</span>
+					<span id="city23time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city31time" class="timetable">Time1</span>
+					<span id="city32time" class="timetable">Time2</span>
+					<span id="city33time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city41time" class="timetable">Time1</span>
+					<span id="city42time" class="timetable">Time2</span>
+					<span id="city43time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city51time" class="timetable">Time1</span>
+					<span id="city52time" class="timetable">Time2</span>
+					<span id="city53time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city61time" class="timetable">Time1</span>
+					<span id="city62time" class="timetable">Time2</span>
+					<span id="city63time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city1title" class="timetable timetabsubtitle" >City1</span>
+					<span id="city2title" class="timetable timetabsubtitle" >City2</span>
+					<span id="city3title" class="timetable timetabsubtitle" >City3</span>
+				</li>
+				<li>
+					<span id="city71time" class="timetable">Time1</span>
+					<span id="city72time" class="timetable">Time2</span>
+					<span id="city73time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city81time" class="timetable">Time1</span>
+					<span id="city82time" class="timetable">Time2</span>
+					<span id="city83time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city91time" class="timetable">Time1</span>
+					<span id="city92time" class="timetable">Time2</span>
+					<span id="city93time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city101time" class="timetable">Time1</span>
+					<span id="city102time" class="timetable">Time2</span>
+					<span id="city103time" class="timetable">Time3</span>
+				</li
+				<li>
+					<span id="city111time" class="timetable">Time1</span>
+					<span id="city112time" class="timetable">Time2</span>
+					<span id="city113time" class="timetable">Time3</span>
+				</li>
+				<li>
+					<span id="city121time" class="timetable">Time1</span>
+					<span id="city122time" class="timetable">Time2</span>
+					<span id="city123time" class="timetable">Time3</span>
+				</li>
+				<li class="arrow">
+					<a href="#more">
+					<span class="timetable" style="width:100%">Tap for Daylight Saving Time settings</font>
+					</a>
+				</li>
+			</ul>
+        </div>
+        <div id="about">
+            <div class="toolbar">
+                <h1>About</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <div>
+                <p>Kilo gives you easy access to your food diary.</p>
+            </div>
+        </div>
+		<div id="more">
+		    <div class="toolbar">
+		        <h1>More</h1>
+		        <a class="button back" href="#home" id="settingdone">Done</a>
+		    </div>
+			<ul class="plastic">
+				<li class="arrow"><a href="#about">About</a></li>
+				<li class="arrow"><a href="#dstsettings" id="dstsettingspage">Daylight Saving Time settings</a></li>
+				<li class="arrow"><a href="#gtranslator">Translate a short phrase</a></li>
+				<li class="forward"><a href="http://www.twitter.com/waiseto" target="_blank"><img src="follow_me-c.png" alt="Follow waiseto on Twitter"/></a></li>
+            </ul>
+			<script type="text/javascript">
+			var admob_vars = {
+			 pubid: 'a14c3a208f09fd3', // publisher id
+			 bgcolor: '000000', // background color (hex)
+			 text: 'FFFFFF', // font-color (hex)
+			 ama: false, // set to true and retain comma for the AdMob Adaptive Ad Unit, a special ad type designed for PC sites accessed from the iPhone.  More info: http://developer.admob.com/wiki/IPhone#Web_Integration
+			 test: true // test mode, set to false to receive live ads
+			};
+			</script>
+			<script type="text/javascript" src="http://mmv.admob.com/static/iphone/iadmob.js"></script>
+		</div>
+		<div id="dstsettings">
+		    <div class="toolbar">
+				<a class="button back" href="#more" id="settingdone">Back</a>
+		        <h1>DST settings</h1>
+		    </div>
+		    <form method="post">
+		        <ul class="rounded">
+					<li>Africa DST <span class="toggle"><input type="checkbox" id="afdst"/></span></li>
+					<li>Asia DST <span class="toggle"><input type="checkbox" id="apdst"/></span></li>
+					<li>Australia DST <span class="toggle"><input type="checkbox" id="audst"/></span></li>
+					<li><font style="color:#ffffff">Europe DST</font> <span class="toggle"><input type="checkbox" id="eudst"/></span></li>
+					<li><font style="color:#ffffff">N.America DST</font> <span class="toggle"><input type="checkbox" id="nadst"/></span></li>
+					<li><font style="color:#ffffff">S.America DST</font> <span class="toggle"><input type="checkbox" id="sadst"/></span></li>
+		        </ul>
+		    </form>
+		</div>
+		<div id="gtranslator">
+		    <div class="toolbar">
+				<a class="button back" href="#more">Back</a>
+		        <h1>Translate</h1>
+		    </div>
+			<div style="margin:10">
+			Auto detect source language and translate to:<br/>
+			<select id="tlang" style="width:200px;">
+			  <option value="zh-TW">Chinese Trad</option>
+			  <option value="zh-CN">Chinese Simpl</option>
+			  <option value="en">English</option>
+			  <option value="fi">Finnish</option>
+		      <option value="fr">French</option>
+			  <option value="de">German</option>
+		      <option value="it">Italian</option>
+		      <option value="ja">Japanese</option>
+			  <option value="ko">Korean</option>
+			  <option value="pt">Portuguese</option>
+			  <option value="es">Spanish</option>
+			</select><BUTTON TYPE=BUTTON onClick="gtranslate()" style="margin:10;">
+			<I>GO</I></BUTTON><br/><br/>
+			<textarea id="text" name="query" rows="5" cols="30">Enter string here</textarea> 
+		    <textarea id="translation" name="results" rows="5" cols="30">Results</textarea><br/>
+			Copy from the above text box and paste the text where ever.
+			</div>
+		</div>
+	</body>
 </html>
