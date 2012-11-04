@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>ZonesPlanner</title>
+		<link type="text/css" rel="stylesheet" media="screen" href="jqtouch/jqtouch.css">
+		<link type="text/css" rel="stylesheet" media="screen" href="themes/jqt/theme.css">
+		<link type="text/css" rel="stylesheet" media="screen" href="zonesplanner.css">
+		<script type="text/javascript" src="jqtouch/jquery.js"></script>
+		<script type="text/javascript" src="jqtouch/jqtouch.js"></script>
+		<script type="text/javascript" src="phonegap.js" charset="utf-8"></script>
+		<script type="text/javascript" src="zonesplanner.js" charset="utf-8"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="gtranslator.js"></script>
+    </head>
+    <body>
+		<div id="gtranslator">
+		    <div class="toolbar">
+				<a class="button back" href="index.html" rel="external">Back</a>
+		        <h1>Translate</h1>
+		    </div>
+			<div style="margin:10">
+			Auto detect source language and translate to:<br/>
+			<select id="tlang" style="width:200px;">
+			  <option value="zh-TW">Chinese Trad</option>
+			  <option value="zh-CN">Chinese Simpl</option>
+			  <option value="en">English</option>
+			  <option value="fi">Finnish</option>
+		      <option value="fr">French</option>
+			  <option value="de">German</option>
+		      <option value="it">Italian</option>
+		      <option value="ja">Japanese</option>
+			  <option value="ko">Korean</option>
+			  <option value="pt">Portuguese</option>
+			  <option value="es">Spanish</option>
+			</select><BUTTON TYPE=BUTTON onClick="gtranslate()" style="margin:10;">
+			<I>GO</I></BUTTON><br/><br/>
+			<textarea id="text" name="query" rows="5" cols="30">Enter string here</textarea> 
+		    <textarea id="translation" name="results" rows="5" cols="30">Results</textarea><br/>
+			Copy from the above text box and paste the text where ever.
+			<a href="index.html">Back</a>
+			</div>
+		</div>
+	</body>
+</html>
